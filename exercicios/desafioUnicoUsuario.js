@@ -10,6 +10,7 @@ let idFrom = [643571007,689186643]
 bot.start(ctx => {
     const from = ctx.update.message.from
     console.log(from.id)
+    //if(ctx.update.message.from.id === 123){
     if(idFrom.indexOf(from.id) !== -1){
         ctx.reply(`Seja bem vindo, ${from.first_name}!`)
     }else{
