@@ -5,7 +5,7 @@
 const env = require('../.env')
 const Telegraf = require('telegraf')
 const bot = new Telegraf(env.token)
-let idFrom = [643571007,689186643]
+let idFrom = []
 
 bot.start(ctx => {
     const from = ctx.update.message.from
