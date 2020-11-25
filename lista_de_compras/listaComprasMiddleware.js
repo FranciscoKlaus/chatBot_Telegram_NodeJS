@@ -45,7 +45,7 @@ bot.on("text", verificarUsuario, processando, ctx =>{
     ctx.reply(`${msg} adicionado!`, botoes(ctx.session.lista))
 })
 
-bot.action(/delete (.+)/, ctx =>{
+bot.action(/delete (.+)/,verificarUsuario,  ctx =>{
     ctx.session.lista = ctx.session.lista.filter(
         item => item !== ctx.match[1])
     ctx.reply(`${ctx.match[1]} deletado!`, botoes(ctx.session.lista))
