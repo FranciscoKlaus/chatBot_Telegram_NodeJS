@@ -16,6 +16,7 @@ bot.use(session())
 
 bot.start(async ctx =>{
     const name = ctx.update.message.from.first_name
+    console.log(ctx.update.message.from)
     await ctx.reply(`Seja bem vindo, ${name}!`)
     await ctx.reply(`Escreva os items que você deseja adicionar..`)
     ctx.session.lista = []
